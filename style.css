@@ -1,0 +1,167 @@
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #004aad;
+  padding: 15px 30px;
+  color: white;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+img {
+    width: 100%;
+    max-width: 400px;
+    transition: width 0.3s ease;
+  }
+
+  video {
+    width: 80%;
+    border: 4px solid red;
+    transition: all 0.3s ease;
+  }
+
+.hero, .image_section, .video_section
+  {
+  text-align: center;
+  padding: 50px 20px;
+}
+.hero .btn {
+  background: #004aad;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .nav-links li {
+    margin: 5px 0;
+  }
+
+  .nav-links a {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #0056d6;
+    border-radius: 5px;
+  }
+
+  .nav-links a:hover {
+    background-color: #003e99;
+  }
+  .logo {
+    font-size: 12px;
+    font-weight: bold;
+    }
+}
+
+@media print {
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+    padding: 15px 30px;
+    color: white;
+    }
+
+    .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    }
+}
+
+
+/* If user prefers Dark Mode */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: #f0f0f0;
+  }
+}
+
+/* If user prefers Light Mode (optional override) */
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: #ffffff;
+    color: #000000;
+  }
+}
+
+/*  When device is in landscape orientation */
+@media (orientation: landscape) {
+img {
+    width: 100%;
+    border: 4px solid green;
+}
+}
+
+/*  When in portrait orientation (optional) */
+@media (orientation: portrait) {
+img {
+    width: 50%;
+    border: 4px solid blue;
+}
+}
+
+  /* When the screen is 16:9 */
+@media (aspect-ratio: 16/9) {
+    video {
+      width: 100%;
+      border-color: green;
+    }
+  }
+
+  /* When the screen is taller (portrait-like) */
+  @media (max-aspect-ratio: 3/4) {
+    video {
+      width: 70%;
+      border-color: blue;
+    }
+  }
